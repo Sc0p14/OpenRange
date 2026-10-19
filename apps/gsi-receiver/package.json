@@ -1,0 +1,24 @@
+{
+  "name": "@openrange/gsi-receiver",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@openrange/config": "workspace:*",
+    "@openrange/contracts": "workspace:*",
+    "@openrange/db": "workspace:*",
+    "fastify": "^5.0.0",
+    "pino": "^9.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0"
+  }
+}

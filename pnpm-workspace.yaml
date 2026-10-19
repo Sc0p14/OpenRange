@@ -1,0 +1,12 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Explicitly permit only the native binary build needed by Vitest/Vite.
+# New dependency build scripts remain blocked until reviewed.
+allowBuilds:
+  better-sqlite3: true
+  esbuild: true
+
+onlyBuiltDependencies:
+  - esbuild
