@@ -1,4 +1,5 @@
 import { AimSessionWidget } from "../../components/aim-session-widget";
+import { PracticeConfigCard } from "../../components/practice-config-card";
 import { AppShell } from "../../components/app-shell";
 
 export default function TrainingPage() {
@@ -9,6 +10,7 @@ export default function TrainingPage() {
         локальный матч в CS2 — сессия появится сама.
       </p>
       <AimSessionWidget />
+      <PracticeConfigCard />
     </AppShell>
   );
 }

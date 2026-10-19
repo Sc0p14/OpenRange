@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@openrange/config": "workspace:*",
+    "@openrange/contracts": "workspace:*",
     "@openrange/db": "workspace:*",
     "@openrange/domain": "workspace:*",
     "next": "^16.0.0",

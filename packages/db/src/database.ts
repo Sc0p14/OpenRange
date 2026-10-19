@@ -43,7 +43,20 @@ CREATE TABLE IF NOT EXISTS aim_sessions (
   summary_json TEXT NOT NULL DEFAULT '{}',
   updated_at INTEGER NOT NULL
 );
-CREATE INDEX IF NOT EXISTS aim_sessions_started_at_idx ON aim_sessions(started_at DESC);`;
+CREATE INDEX IF NOT EXISTS aim_sessions_started_at_idx ON aim_sessions(started_at DESC);
+CREATE TABLE IF NOT EXISTS lineups (
+  id TEXT PRIMARY KEY NOT NULL,
+  map TEXT NOT NULL,
+  side TEXT NOT NULL CHECK (side IN ('T', 'CT', 'both')),
+  kind TEXT NOT NULL CHECK (kind IN ('smoke', 'flash', 'molotov', 'he', 'decoy')),
+  title TEXT NOT NULL,
+  stance TEXT NOT NULL DEFAULT '',
+  notes TEXT NOT NULL DEFAULT '',
+  tags_json TEXT NOT NULL DEFAULT '[]',
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS lineups_map_idx ON lineups(map, side, kind);`;
 
 function findWorkspaceRoot(): string | null {
   let directory = resolve(process.cwd());

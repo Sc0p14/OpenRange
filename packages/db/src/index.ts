@@ -14,3 +14,12 @@ export {
   listAimSessions,
   type AimSession
 } from "./aim-sessions.js";
+export {
+  countLineups,
+  createLineup,
+  deleteLineup,
+  getLineup,
+  listLineups,
+  updateLineup,
+  type LineupFilter
+} from "./lineups.js";

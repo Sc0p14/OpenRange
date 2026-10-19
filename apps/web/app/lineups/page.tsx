@@ -1,10 +1,10 @@
-import { ScreenPlaceholder } from "../../components/screen-placeholder";
+import { LineupsBrowser } from "../../components/lineups-browser";
+import { AppShell } from "../../components/app-shell";
+
 export default function LineupsPage() {
   return (
-    <ScreenPlaceholder
-      title="Раскиды"
-      description="Локальная библиотека раскидов ещё не добавлена."
-      phase="Фаза 3"
-    />
+    <AppShell title="Раскиды">
+      <LineupsBrowser />
+    </AppShell>
   );
 }

@@ -277,6 +277,9 @@ importers:
       "@openrange/config":
         specifier: workspace:*
         version: link:../../packages/config
+      "@openrange/contracts":
+        specifier: workspace:*
+        version: link:../../packages/contracts
       "@openrange/db":
         specifier: workspace:*
         version: link:../../packages/db
@@ -317,6 +320,9 @@ importers:
 
   packages/db:
     dependencies:
+      "@openrange/contracts":
+        specifier: workspace:*
+        version: link:../contracts
       "@openrange/domain":
         specifier: workspace:*
         version: link:../domain

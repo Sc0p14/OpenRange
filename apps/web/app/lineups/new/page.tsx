@@ -1,10 +1,10 @@
-import { ScreenPlaceholder } from "../../../components/screen-placeholder";
-export default function LineupEditorPage() {
+import { LineupForm } from "../../../components/lineup-form";
+import { AppShell } from "../../../components/app-shell";
+
+export default function NewLineupPage() {
   return (
-    <ScreenPlaceholder
-      title="Редактор раскидов"
-      description="Редактор координат и экспорт JSON ещё не добавлены."
-      phase="Фаза 3"
-    />
+    <AppShell title="Новый раскид">
+      <LineupForm />
+    </AppShell>
   );
 }
