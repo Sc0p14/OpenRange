@@ -1,0 +1,10 @@
+# Normalize line endings: LF in the repository and on checkout for text files.
+* text=auto eol=lf
+
+# Binary assets are handled by LFS/git natively.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.vtf binary
+*.bsp binary
